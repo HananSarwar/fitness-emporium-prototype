@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fitness Emporium, Gulshan-e-Iqbal Karachi</title>
+<meta name="description" content="Fitness Emporium, Gulshan-e-Iqbal Karachi. Changing bodies, changing lives. Strength, mobility and conditioning with expert coaches.">
+<meta name="theme-color" content="#121214">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800;900&family=Figtree:wght@400;600;700&family=Yellowtail&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#121214;
+  --coal:#1A1A1D;
+  --coal-2:#222226;
+  --line:#2D2D33;
+  --red:#E5383B;
+  --red-deep:#A61E26;
+  --volt:#F2C230;
+  --bone:#EDEAE4;
+  --mute:#9C9AA3;
+  --wa:#1DA851;
+  --out:cubic-bezier(.16,1,.3,1);
+  --io:cubic-bezier(.65,0,.35,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip}
+body{background:var(--ink);color:var(--bone);font-family:"Figtree",system-ui,sans-serif;font-size:17px;line-height:1.6;overflow-x:clip}
+a{color:inherit}
+svg{display:block}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--volt);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.u{font-family:"Unbounded","Arial Black",sans-serif;font-weight:800;letter-spacing:-.02em;line-height:1.02}
+.red{color:var(--red)}
+
+/* reveal: only hidden when JS runs; opacity + transform so observers always fire */
+.js .rv{opacity:0;transform:translateY(34px);transition:opacity .9s var(--out),transform 1.1s var(--out)}
+.js .rv.in{opacity:1;transform:none}
+.d1{transition-delay:.08s!important}.d2{transition-delay:.16s!important}.d3{transition-delay:.24s!important}
+
+/* ---------- header ---------- */
+header.top{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .4s,border-color .4s;border-bottom:1px solid transparent}
+header.top.solid{background:rgba(18,18,20,.85);backdrop-filter:blur(12px);border-color:var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand svg{width:44px;height:44px}
+.brand b{font-family:"Unbounded",sans-serif;font-weight:800;font-size:15px;letter-spacing:.01em;line-height:1.1;display:block}
+.brand small{display:block;font-size:12px;color:var(--mute);font-weight:600}
+nav.links{display:flex;gap:30px;font-weight:600;font-size:15px}
+nav.links a{text-decoration:none;color:#c9c6c0;transition:color .2s}
+nav.links a:hover{color:var(--volt)}
+@media (max-width:920px){nav.links{display:none}}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 24px;border-radius:999px;background:var(--red);color:#fff;font-weight:700;font-size:15px;text-decoration:none;border:0;cursor:pointer;transition:transform .35s var(--out),background .25s,box-shadow .35s}
+.btn:hover{transform:translateY(-2px);background:#EF4A4D;box-shadow:0 10px 30px -10px rgba(229,56,59,.65)}
+.btn.line{background:transparent;box-shadow:inset 0 0 0 1.5px #5a5860;color:var(--bone)}
+.btn.line:hover{box-shadow:inset 0 0 0 1.5px var(--bone)}
+.btn.light{background:var(--bone);color:var(--ink)}
+.btn.light:hover{background:#fff;box-shadow:0 10px 30px -12px rgba(237,234,228,.5)}
+.btn svg{width:18px;height:18px}
+.top .btn{padding:11px 18px}
+@media (max-width:600px){.top .btn .lbl{display:none}.top .btn{padding:11px}}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding:120px 0 70px;overflow:hidden;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:
+  radial-gradient(48% 55% at 74% 46%,rgba(229,56,59,.20),transparent 70%),
+  radial-gradient(30% 30% at 82% 30%,rgba(242,194,48,.07),transparent 70%)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:30px;align-items:center;width:100%}
+.status{display:inline-flex;align-items:center;gap:10px;padding:8px 16px 8px 12px;border-radius:999px;background:var(--coal);border:1px solid var(--line);font-size:14px;font-weight:600;margin-bottom:28px}
+.dot{width:10px;height:10px;border-radius:50%;background:#34D17A;position:relative;flex:none}
+.dot::after{content:"";position:absolute;inset:0;border-radius:50%;background:inherit;animation:ping 2.2s ease-out infinite}
+.dot.off{background:var(--red)}.dot.off::after{display:none}
+@keyframes ping{to{transform:scale(2.8);opacity:0}}
+.hero h1{font-size:clamp(40px,7.2vw,96px);font-weight:900}
+.hero h1 .ln{display:block;overflow:hidden;padding:.02em 0 .06em}
+.hero h1 .ln > span{display:inline-block;transform:translateY(110%);animation:rise 1.1s var(--out) forwards}
+.hero h1 .ln:nth-child(2) > span{animation-delay:.12s}
+.hero h1 .ln:nth-child(3) > span{animation-delay:.24s}
+.hero h1 .ln:nth-child(4) > span{animation-delay:.36s}
+@keyframes rise{to{transform:none}}
+.hero h1 .soft{color:transparent;-webkit-text-stroke:1.5px #6b6870}
+.hero p.lede{max-width:31em;margin-top:26px;color:#c9c6c0;font-size:18.5px;opacity:0;animation:fade .9s var(--out) .55s forwards}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;opacity:0;animation:fade .9s var(--out) .7s forwards}
+@keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* kettlebell + bolt */
+.bell{position:relative;justify-self:center;width:min(100%,460px);aspect-ratio:1}
+.bell svg{width:100%;height:100%;overflow:visible}
+.bell .ring{fill:none;stroke:#2f2f35;stroke-width:3}
+.bell .body{fill:none;stroke:var(--bone);stroke-width:10;stroke-linecap:round;stroke-dasharray:1200;stroke-dashoffset:1200;animation:draw 1.8s var(--io) .2s forwards}
+.bell .bolt{fill:var(--red);stroke:var(--red);stroke-width:4;stroke-linejoin:round;transform-origin:50% 55%;transform:scale(.4);opacity:0;animation:strike .7s var(--out) 1.5s forwards}
+.bell .glow{fill:var(--red);filter:blur(28px);opacity:0;animation:breathe 4s ease-in-out 2.1s infinite}
+.bell .orbit{transform-origin:50% 50%;animation:spin 30s linear infinite}
+.bell .orbit circle{fill:var(--volt)}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes strike{60%{transform:scale(1.08);opacity:1}100%{transform:scale(1);opacity:1}}
+@keyframes breathe{0%,100%{opacity:.18}50%{opacity:.38}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.stats{display:flex;gap:34px;margin-top:44px;opacity:0;animation:fade .9s var(--out) .85s forwards}
+.stat b{display:block;font-family:"Unbounded",sans-serif;font-weight:800;font-size:38px;line-height:1}
+.stat > span{font-size:13px;color:var(--mute);font-weight:600}
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .bell{grid-row:1;width:min(64vw,300px);margin-bottom:-6px}
+  .hero{padding-top:100px}
+  .stats{gap:24px}.stat b{font-size:30px}
+}
+
+/* ---------- marquee ---------- */
+.marquee{border-block:1px solid var(--line);background:var(--coal);overflow:hidden}
+.marquee .track{display:flex;width:max-content;animation:scroll 40s linear infinite}
+.marquee span{font-family:"Unbounded",sans-serif;font-weight:600;font-size:clamp(18px,2.2vw,26px);padding:18px 0;display:flex;align-items:center;white-space:nowrap;color:#d6d3cd}
+.marquee span::after{content:"";width:14px;height:22px;margin:0 30px;background:var(--red);clip-path:polygon(60% 0,0 58%,45% 58%,35% 100%,100% 38%,55% 38%);flex:none}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* ---------- sections ---------- */
+section.block{padding:120px 0}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--volt);font-weight:700;font-size:15px;margin-bottom:16px}
+.eyebrow svg{width:12px;height:18px}
+h2.u{font-size:clamp(34px,5.2vw,64px);font-weight:800;max-width:15em}
+.lead{color:#bdbab4;max-width:36em;margin-top:18px;font-size:18px}
+
+/* tabs: strength / mobility / conditioning */
+.tabs{margin-top:54px;display:grid;grid-template-columns:320px 1fr;gap:40px}
+.tablist{display:grid;gap:10px;align-content:start}
+.tab{display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;padding:22px 24px;border-radius:18px;background:var(--coal);border:1px solid var(--line);cursor:pointer;transition:background .3s,border-color .3s,transform .35s var(--out)}
+.tab:hover{transform:translateX(4px);border-color:#44434a}
+.tab .t{font-family:"Unbounded",sans-serif;font-weight:800;font-size:20px}
+.tab .arrow{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--coal-2);transition:background .3s,transform .4s var(--out)}
+.tab[aria-selected="true"]{background:var(--red);border-color:var(--red)}
+.tab[aria-selected="true"] .arrow{background:rgba(0,0,0,.2);transform:rotate(-45deg)}
+.panels{position:relative;min-height:380px}
+.panel{position:absolute;inset:0;border-radius:24px;background:var(--coal);border:1px solid var(--line);padding:40px;display:grid;grid-template-columns:1fr 200px;gap:30px;opacity:0;visibility:hidden;transform:translateY(16px) scale(.985);transition:opacity .5s var(--out),transform .6s var(--out),visibility 0s .5s}
+.panel.on{opacity:1;visibility:visible;transform:none;transition:opacity .5s var(--out),transform .6s var(--out),visibility 0s}
+.panel h3{font-family:"Unbounded",sans-serif;font-weight:800;font-size:clamp(26px,3vw,36px);line-height:1.05}
+.panel p{color:#bdbab4;margin-top:14px}
+.panel ul{list-style:none;margin-top:22px;display:grid;gap:12px}
+.panel li{display:flex;gap:12px;align-items:flex-start}
+.panel li::before{content:"";flex:none;width:9px;height:14px;margin-top:6px;background:var(--volt);clip-path:polygon(60% 0,0 58%,45% 58%,35% 100%,100% 38%,55% 38%)}
+.panel .art{align-self:center;width:200px;height:200px}
+.panel .art *{fill:none;stroke-linecap:round;stroke-linejoin:round}
+.panel.on .art .draw{stroke-dasharray:600;stroke-dashoffset:600;animation:draw 1.4s var(--io) .15s forwards}
+@media (max-width:900px){
+  .tabs{grid-template-columns:1fr;gap:20px}
+  .tablist{grid-template-columns:repeat(3,1fr);gap:8px}
+  .tab{padding:14px 12px;justify-content:center;border-radius:14px}
+  .tab .t{font-size:13px}.tab .arrow{display:none}
+  .tab:hover{transform:none}
+  .panels{min-height:0;display:grid}
+  .panel{position:relative;inset:auto;grid-area:1/1;grid-template-columns:1fr;padding:28px 22px}
+  .panel .art{display:none}
+  .tabs > *,.panels,.panel > div{min-width:0}
+}
+@media (max-width:360px){.tab{padding:12px 6px}.tab .t{font-size:11.5px}}
+
+/* transformation steps */
+.journey{background:var(--coal);border-block:1px solid var(--line)}
+.steps{position:relative;margin-top:70px;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;padding-top:50px}
+.steps .rail{position:absolute;left:0;right:0;top:0;height:4px;border-radius:4px;background:var(--line)}
+.steps .rail i{position:absolute;inset:0;border-radius:4px;background:linear-gradient(90deg,var(--red),var(--volt));transform-origin:left;transform:scaleX(var(--p,0))}
+.step{position:relative;opacity:.4;transition:opacity .5s}
+.step.on{opacity:1}
+.step .n{position:absolute;top:-66px;left:0;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-family:"Unbounded",sans-serif;font-weight:800;font-size:14px;background:var(--ink);border:2px solid var(--line);transition:background .4s,border-color .4s,color .4s}
+.step.on .n{background:var(--red);border-color:var(--red);color:#fff}
+.step h3{font-family:"Unbounded",sans-serif;font-weight:800;font-size:22px;margin-bottom:8px}
+.step p{color:#bdbab4;font-size:16px}
+@media (max-width:900px){
+  .steps{grid-template-columns:1fr;gap:38px;padding:0 0 0 54px;margin-top:50px}
+  .steps .rail{left:16px;right:auto;top:0;bottom:0;width:4px;height:auto}
+  .steps .rail i{transform-origin:top;transform:scaleY(var(--p,0))}
+  .step .n{top:-4px;left:-54px}
+}
+
+/* weight room neon */
+.room{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.neon-box{position:relative;border-radius:28px;background:#0c0c0e;border:1px solid var(--line);aspect-ratio:4/3;display:grid;place-items:center;overflow:hidden;isolation:isolate}
+.neon-box::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(60% 60% at 50% 55%,rgba(229,56,59,.16),transparent 70%)}
+.neon{font-family:"Yellowtail",cursive;font-size:clamp(56px,7vw,96px);color:#ffd9d9;transform:rotate(-6deg);text-shadow:0 0 4px #fff2,0 0 10px rgba(229,56,59,.9),0 0 24px rgba(229,56,59,.6),0 0 48px rgba(229,56,59,.35);opacity:.25;transition:opacity .2s}
+.neon.lit{animation:powerup 1.6s steps(1) forwards, hum 5s ease-in-out 1.8s infinite}
+@keyframes powerup{0%{opacity:.25}12%{opacity:1}18%{opacity:.35}30%{opacity:1}36%{opacity:.5}48%,100%{opacity:1}}
+@keyframes hum{0%,100%{opacity:1}50%{opacity:.86}}
+.neon-box .bolt2{position:absolute;right:16%;top:20%;width:40px;fill:var(--volt);filter:drop-shadow(0 0 10px rgba(242,194,48,.6));opacity:0;transition:opacity .4s 1s}
+.neon-box.lit .bolt2{opacity:1}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:30px}
+.feat div{padding:18px 18px;border-radius:16px;background:var(--coal);border:1px solid var(--line);font-weight:600;transition:border-color .3s,transform .35s var(--out)}
+.feat div:hover{border-color:var(--red);transform:translateY(-3px)}
+.feat small{display:block;color:var(--mute);font-weight:400;font-size:14px;margin-top:2px}
+@media (max-width:900px){.room{grid-template-columns:1fr;gap:36px}}
+@media (max-width:420px){.feat{grid-template-columns:1fr}}
+
+/* coaches */
+.coaches{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:20px;margin-top:54px}
+.coach{position:relative;border-radius:24px;background:var(--coal);border:1px solid var(--line);padding:30px;overflow:hidden;transition:transform .45s var(--out),border-color .3s}
+.coach:hover{transform:translateY(-6px);border-color:#4a4950}
+.coach .av{width:84px;height:84px;border-radius:50%;display:grid;place-items:center;font-family:"Unbounded",sans-serif;font-weight:900;font-size:34px;background:var(--red);color:#fff;margin-bottom:24px}
+.coach.v .av{background:var(--volt);color:var(--ink)}
+.coach h3{font-family:"Unbounded",sans-serif;font-weight:800;font-size:24px}
+.coach .role{color:var(--volt);font-weight:700;font-size:14px;margin-top:4px}
+.coach p{color:#bdbab4;margin-top:14px;font-size:16px}
+.coach.online{background:linear-gradient(150deg,#2a1214,var(--coal) 60%);border-color:#4b2226}
+.coach.online .btn{margin-top:22px}
+@media (max-width:960px){.coaches{grid-template-columns:1fr 1fr}.coach.online{grid-column:1/-1}}
+@media (max-width:620px){.coaches{grid-template-columns:1fr}}
+
+/* reviews */
+.score{display:flex;align-items:center;gap:26px;flex-wrap:wrap;margin-top:40px}
+.score b{font-family:"Unbounded",sans-serif;font-weight:900;font-size:clamp(84px,12vw,150px);line-height:.9}
+.score .stars{display:flex;gap:6px}
+.score .stars svg{width:26px;height:26px;fill:var(--volt)}
+.score p{color:var(--mute);font-weight:600;margin-top:8px}
+.quotes{display:grid;grid-template-columns:1.25fr 1fr 1fr;gap:20px;margin-top:46px}
+.quotes blockquote{border-radius:22px;background:var(--coal);border:1px solid var(--line);padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:20px}
+.quotes blockquote.big{background:var(--red);border-color:var(--red)}
+.quotes blockquote.big p{font-family:"Unbounded",sans-serif;font-weight:600;font-size:21px;line-height:1.35}
+.quotes footer{font-size:13px;color:var(--mute)}
+.quotes .big footer{color:rgba(255,255,255,.8)}
+@media (max-width:900px){.quotes{grid-template-columns:1fr}}
+
+/* timings dial */
+.visit{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;margin-top:54px;align-items:center}
+.dial{position:relative;width:min(100%,400px);aspect-ratio:1;justify-self:center}
+.dial svg{width:100%;height:100%}
+.dial .track{fill:none;stroke:var(--coal-2);stroke-width:26}
+.dial .arc{fill:none;stroke:var(--red);stroke-width:26;stroke-linecap:butt}
+.dial .arc.am{stroke:var(--volt)}
+.dial .tick{stroke:#4a4950;stroke-width:2}
+.dial .lbl{fill:var(--mute);font:600 13px "Figtree",sans-serif;text-anchor:middle;dominant-baseline:middle}
+.dial .needle{stroke:var(--bone);stroke-width:3;stroke-linecap:round;transition:transform 1.4s var(--out)}
+.dial .hub{fill:var(--bone)}
+.dial .center{position:absolute;inset:0;display:grid;place-items:center;text-align:center;pointer-events:none}
+.dial .center b{display:block;font-family:"Unbounded",sans-serif;font-weight:800;font-size:clamp(24px,4vw,34px);margin-top:44%}
+.dial .center span{font-size:13px;color:var(--mute)}
+.legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:6px;font-size:14px;color:#c9c6c0}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:8px;vertical-align:-1px}
+table.hours{width:100%;border-collapse:collapse;margin-top:22px}
+table.hours td{padding:13px 0;border-bottom:1px solid var(--line);font-size:16px;vertical-align:top}
+table.hours td:last-child{text-align:right;font-weight:600}
+table.hours tr.today td{color:var(--volt)}
+table.hours tr.today td:first-child::after{content:"Today";margin-left:10px;font-size:11px;font-weight:700;background:var(--volt);color:var(--ink);padding:2px 8px;border-radius:999px;vertical-align:1px}
+@media (max-width:900px){.visit{grid-template-columns:1fr;gap:40px}.dial{width:min(84vw,340px)}}
+
+.map{position:relative;margin-top:40px;border-radius:24px;overflow:hidden;border:1px solid var(--line);min-height:380px;background:var(--coal)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(1) invert(.9) contrast(.85)}
+.map .pin{position:absolute;left:16px;bottom:16px;right:16px;max-width:420px;background:var(--ink);border-radius:16px;padding:16px 18px;border-left:4px solid var(--red)}
+.map .pin b{display:block}
+.map .pin span{color:var(--mute);font-size:14px}
+
+/* join */
+.join{position:relative;overflow:hidden;border-radius:32px;background:linear-gradient(140deg,var(--red),var(--red-deep));padding:64px 56px;display:grid;grid-template-columns:1fr 1fr;gap:56px;isolation:isolate}
+.join .bigbolt{position:absolute;right:-60px;bottom:-80px;width:360px;fill:rgba(0,0,0,.14);z-index:-1}
+.join h2.u{font-size:clamp(24px,3.4vw,42px)}
+@media (max-width:900px){.join h2.u{font-size:clamp(24px,6.6vw,44px)}}
+.join > *{min-width:0}
+h2.u,.hero h1{overflow-wrap:break-word}
+.join .lead{color:rgba(255,255,255,.88)}
+form{display:grid;gap:16px;align-content:start}
+label{display:grid;gap:7px;font-size:14px;font-weight:700}
+input,select{font:inherit;font-size:16px;padding:14px 16px;border-radius:12px;border:2px solid transparent;background:#fff;color:#141414;transition:border-color .2s}
+input:focus,select:focus{outline:none;border-color:var(--volt)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips input{position:absolute;opacity:0;pointer-events:none}
+.chips label{display:inline-block;padding:10px 16px;border-radius:999px;border:1.5px solid rgba(255,255,255,.7);cursor:pointer;font-size:14px;transition:background .2s,color .2s,border-color .2s}
+.chips input:checked+label{background:var(--ink);border-color:var(--ink)}
+.chips input:focus-visible+label{outline:3px solid var(--volt);outline-offset:2px}
+fieldset{border:0;display:grid;gap:8px}
+legend{font-size:14px;font-weight:700;margin-bottom:8px}
+.err{font-weight:700;font-size:14px;min-height:1.3em}
+.join .btn{background:var(--ink);justify-self:start}
+.join .btn:hover{background:#000;box-shadow:0 10px 30px -10px rgba(0,0,0,.6)}
+@media (max-width:900px){.join{grid-template-columns:1fr;padding:44px 22px;gap:36px;border-radius:24px}}
+
+footer.site{margin-top:120px;padding:56px 0 120px;border-top:1px solid var(--line);color:var(--mute);font-size:14px}
+footer.site .wrap{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:30px}
+footer.site b{display:block;color:var(--bone);margin-bottom:6px}
+footer.site a{text-decoration:none}
+footer.site a:hover{color:var(--bone)}
+@media (max-width:760px){footer.site .wrap{grid-template-columns:1fr}}
+
+.bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:40;display:none;gap:10px;transform:translateY(150%);transition:transform .5s var(--out)}
+.bar.show{transform:none}
+.bar .btn{flex:1}
+@media (max-width:760px){.bar{display:flex}}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-delay:0s!important;animation-iteration-count:1!important;transition-duration:.001ms!important;transition-delay:0s!important}
+  .marquee .track{animation:none}
+}
+</style>
+</head>
+<body>
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a href="#" class="brand" aria-label="Fitness Emporium, home">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#0c0c0e" stroke="#3a3a40"/><path d="M17 23c-1.6-2.8-1.7-5.6-.2-7.2 1.2-1.3 3-1.8 7.2-1.8s6 .5 7.2 1.8c1.5 1.6 1.4 4.4-.2 7.2" fill="none" stroke="#E5383B" stroke-width="2.8" stroke-linecap="round"/><path d="M15 24c-4.2 4.4-2.8 12.5 9 12.5s13.2-8.1 9-12.5c-2.6-2.6-15.4-2.6-18 0z" fill="none" stroke="#E5383B" stroke-width="2.8"/><path d="M25.5 23.5l-5 7h3.5l-1.5 4.5 5.5-7h-3.5l1-4.5z" fill="#EDEAE4"/></svg>
+      <span><b>FITNESS EMPORIUM</b><small>Gulshan-e-Iqbal, Karachi</small></span>
+    </a>
+    <nav class="links" aria-label="Sections">
+      <a href="#train">Training</a><a href="#coaches">Coaches</a><a href="#reviews">Reviews</a><a href="#visit">Timings</a>
+    </nav>
+    <a class="btn light" href="https://wa.me/923392120444" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .5l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.2.5.1.7-.1l.8-1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.3.1.2.1.7-.1 1.3Z"/></svg><span class="lbl">WhatsApp</span></a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="status" aria-live="polite"><span class="dot" id="dot"></span><span id="state">Checking timings…</span></div>
+      <h1 class="u">
+        <span class="ln"><span>Changing</span></span>
+        <span class="ln"><span class="red">bodies.</span></span>
+        <span class="ln"><span class="soft">Changing</span></span>
+        <span class="ln"><span>lives.</span></span>
+      </h1>
+      <p class="lede">Strength, mobility and conditioning with expert coaches, in the heart of Gulshan-e-Iqbal. Quality facilities at a price that makes sense.</p>
+      <div class="ctas">
+        <a class="btn" href="#join">Start your transformation</a>
+        <a class="btn line" href="tel:+923392120444">Call 0339 2120444</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><b data-count="4.8" data-dec="1">4.8</b><span>Google rating</span></div>
+        <div class="stat"><b data-count="191">191</b><span>Reviews</span></div>
+        <div class="stat"><b>4 yrs</b><span>In Gulshan</span></div>
+      </div>
+    </div>
+    <div class="bell" aria-hidden="true">
+      <svg viewBox="0 0 400 400">
+        <circle class="ring" cx="200" cy="200" r="190"/>
+        <g class="orbit"><circle cx="200" cy="10" r="6"/></g>
+        <circle class="glow" cx="200" cy="262" r="80"/>
+        <path class="body" d="M142 206 C126 176 124 146 140 130 C152 118 170 114 200 114 C230 114 248 118 260 130 C276 146 274 176 258 206 M126 208 C80 252 92 332 200 332 C308 332 320 252 274 208 C246 182 154 182 126 208 Z"/>
+        <path class="bolt" d="M218 210 L170 268 L199 268 L186 312 L236 248 L206 248 Z"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track">
+    <span>Strength</span><span>Mobility</span><span>Conditioning</span><span>Expert coaches</span><span>Gulshan-e-Iqbal</span><span>Changing lives</span>
+    <span>Strength</span><span>Mobility</span><span>Conditioning</span><span>Expert coaches</span><span>Gulshan-e-Iqbal</span><span>Changing lives</span>
+  </div>
+</div>
+
+<section class="block" id="train">
+  <div class="wrap">
+    <div class="eyebrow rv"><svg viewBox="0 0 12 18" fill="currentColor" aria-hidden="true"><path d="M7 0 0 10h5l-2 8 9-11H7l1-7z"/></svg>How we train</div>
+    <h2 class="u rv d1">Three pillars. <span class="red">One stronger you.</span></h2>
+    <div class="tabs rv d2">
+      <div class="tablist" role="tablist" aria-label="Training focus">
+        <button class="tab" role="tab" id="t-str" aria-controls="p-str" aria-selected="true"><span class="t">Strength</span><span class="arrow"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h12M8 2l5 5-5 5"/></svg></span></button>
+        <button class="tab" role="tab" id="t-mob" aria-controls="p-mob" aria-selected="false" tabindex="-1"><span class="t">Mobility</span><span class="arrow"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h12M8 2l5 5-5 5"/></svg></span></button>
+        <button class="tab" role="tab" id="t-con" aria-controls="p-con" aria-selected="false" tabindex="-1"><span class="t">Conditioning</span><span class="arrow"><svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 7h12M8 2l5 5-5 5"/></svg></span></button>
+      </div>
+      <div class="panels">
+        <div class="panel on" role="tabpanel" id="p-str" aria-labelledby="t-str">
+          <div>
+            <h3>Get strong, the right way</h3>
+            <p>Free weights, racks and machines, with a coach making sure every lift is safe and every week moves you forward.</p>
+            <ul><li>Progressive plans for beginners and lifters</li><li>Form checks on the big lifts</li><li>Muscle gain and body recomposition</li></ul>
+          </div>
+          <svg class="art" viewBox="0 0 200 200" aria-hidden="true"><path class="draw" d="M20 100h20M160 100h20M40 70v60M55 60v80M145 60v80M160 70v60M55 100h90" stroke="#E5383B" stroke-width="10"/></svg>
+        </div>
+        <div class="panel" role="tabpanel" id="p-mob" aria-labelledby="t-mob" hidden>
+          <div>
+            <h3>Move better, hurt less</h3>
+            <p>Mobility work that opens up tight hips, shoulders and backs, so you lift more and feel better outside the gym.</p>
+            <ul><li>Stretching and joint mobility routines</li><li>Warm-ups that protect you from injury</li><li>Posture work for desk jobs</li></ul>
+          </div>
+          <svg class="art" viewBox="0 0 200 200" aria-hidden="true"><path class="draw" d="M30 150 C60 40 140 40 170 150" stroke="#F2C230" stroke-width="10"/><circle class="draw" cx="100" cy="64" r="16" stroke="#EDEAE4" stroke-width="8"/></svg>
+        </div>
+        <div class="panel" role="tabpanel" id="p-con" aria-labelledby="t-con" hidden>
+          <div>
+            <h3>Build an engine</h3>
+            <p>Circuits and cardio that burn fat, build stamina and keep your heart strong, at a pace your coach sets for you.</p>
+            <ul><li>Fat-loss circuits and HIIT</li><li>Cardio zone for steady sessions</li><li>Stamina you notice in daily life</li></ul>
+          </div>
+          <svg class="art" viewBox="0 0 200 200" aria-hidden="true"><path class="draw" d="M10 110h40l15-40 25 80 20-60 15 20h65" stroke="#E5383B" stroke-width="9"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block journey" id="journey">
+  <div class="wrap">
+    <div class="eyebrow rv"><svg viewBox="0 0 12 18" fill="currentColor" aria-hidden="true"><path d="M7 0 0 10h5l-2 8 9-11H7l1-7z"/></svg>Your transformation</div>
+    <h2 class="u rv d1">From first message to <span class="red">a new you.</span></h2>
+    <div class="steps" id="steps">
+      <div class="rail"><i id="rail"></i></div>
+      <div class="step"><span class="n">1</span><h3>Message us</h3><p>Send a DM or WhatsApp with your goal. We reply with a time for your first visit.</p></div>
+      <div class="step"><span class="n">2</span><h3>Assessment</h3><p>A coach checks your fitness, posture and starting numbers, and listens to what you want.</p></div>
+      <div class="step"><span class="n">3</span><h3>Your plan</h3><p>Training and a diet built around your routine, with your coach adjusting it as you grow.</p></div>
+      <div class="step"><span class="n">4</span><h3>Results</h3><p>We retest and compare with day one. That's how bodies change, and lives with them.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="room">
+  <div class="wrap room">
+    <div class="neon-box rv" id="neonbox" aria-hidden="true">
+      <span class="neon" id="neon">Weight Room</span>
+      <svg class="bolt2" viewBox="0 0 12 18"><path d="M7 0 0 10h5l-2 8 9-11H7l1-7z"/></svg>
+    </div>
+    <div>
+      <div class="eyebrow rv"><svg viewBox="0 0 12 18" fill="currentColor" aria-hidden="true"><path d="M7 0 0 10h5l-2 8 9-11H7l1-7z"/></svg>Inside the gym</div>
+      <h2 class="u rv d1">Built for people who <span class="red">show up.</span></h2>
+      <p class="lead rv d2">Well-kept equipment, a motivating vibe, and a clean, organised floor where beginners and regulars both feel at home.</p>
+      <div class="feat rv d3">
+        <div>Weight room<small>Racks, free weights, machines</small></div>
+        <div>Cardio zone<small>For warm-ups and fat loss</small></div>
+        <div>Expert coaches<small>Guidance on every visit</small></div>
+        <div>Budget friendly<small>Quality without the high fee</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="coaches" style="padding-top:40px">
+  <div class="wrap">
+    <div class="eyebrow rv"><svg viewBox="0 0 12 18" fill="currentColor" aria-hidden="true"><path d="M7 0 0 10h5l-2 8 9-11H7l1-7z"/></svg>Expert coaches</div>
+    <h2 class="u rv d1">The people behind <span class="red">the change.</span></h2>
+    <div class="coaches">
+      <article class="coach online rv">
+        <div class="av">U</div>
+        <h3>Coach Usman</h3>
+        <div class="role">Co-founder &amp; online coach</div>
+        <p>Can't make it to Gulshan every day? Train with Usman online, with a plan, check-ins and diet guidance wherever you are.</p>
+        <a class="btn" href="https://wa.me/923392120444?text=Assalam%20o%20Alaikum%2C%20I%20want%20to%20know%20about%20online%20coaching%20with%20Coach%20Usman." target="_blank" rel="noopener">Ask about online coaching</a>
+      </article>
+      <article class="coach v rv d1">
+        <div class="av">M</div>
+        <h3>Coach Madiha</h3>
+        <div class="role">Trainer</div>
+        <p>Supportive, knowledgeable and full of energy. Members say she makes them look forward to every session.</p>
+      </article>
+      <article class="coach rv d2">
+        <div class="av">+</div>
+        <h3>The team</h3>
+        <div class="role">Floor coaches</div>
+        <p>Welcoming staff on the floor to guide your form, set up equipment and keep you moving.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="reviews" style="padding-top:40px">
+  <div class="wrap">
+    <div class="eyebrow rv"><svg viewBox="0 0 12 18" fill="currentColor" aria-hidden="true"><path d="M7 0 0 10h5l-2 8 9-11H7l1-7z"/></svg>Member reviews</div>
+    <h2 class="u rv d1">Gulshan rates us <span class="red">4.8.</span></h2>
+    <div class="score rv d2">
+      <b data-count="4.8" data-dec="1">4.8</b>
+      <div>
+        <div class="stars"><svg viewBox="0 0 24 24"><path d="m12 2 3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8L12 2Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8L12 2Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8L12 2Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8L12 2Z"/></svg><svg viewBox="0 0 24 24"><path d="m12 2 3 6.6 7 .8-5.2 4.8 1.4 7L12 17.8 5.8 21.2l1.4-7L2 9.4l7-.8L12 2Z"/></svg></div>
+        <p>From 191 reviews on Google</p>
+      </div>
+    </div>
+    <div class="quotes">
+      <blockquote class="big rv"><p>"Best gym in budget! Itni achi facilities itni reasonable price mein milna mushkil hai."</p><footer>Member review on Google</footer></blockquote>
+      <blockquote class="rv d1"><p>Top-notch equipment, a motivating atmosphere, and staff who are always welcoming. People of every fitness level feel comfortable here.</p><footer>Member review on Google</footer></blockquote>
+      <blockquote class="rv d2"><p>Only a week in and I already feel more energetic and focused. Everything is clean, organised and well maintained.</p><footer>Member review on Google</footer></blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="visit" style="padding-top:40px">
+  <div class="wrap">
+    <div class="eyebrow rv"><svg viewBox="0 0 12 18" fill="currentColor" aria-hidden="true"><path d="M7 0 0 10h5l-2 8 9-11H7l1-7z"/></svg>Timings and location</div>
+    <h2 class="u rv d1">Two shifts. <span class="red">Pick yours.</span></h2>
+    <div class="visit">
+      <div class="dial rv d2">
+        <svg viewBox="0 0 400 400" id="dialsvg" role="img" aria-label="24-hour clock showing open hours: 6:30 to 10 am, and 2:30 pm to 1 am, Monday to Saturday">
+          <circle class="track" cx="200" cy="200" r="150"/>
+          <path class="arc am" id="arcAm"/>
+          <path class="arc" id="arcPm"/>
+          <g id="ticks"></g>
+          <line class="needle" id="needle" x1="200" y1="200" x2="200" y2="78"/>
+          <circle class="hub" cx="200" cy="200" r="7"/>
+        </svg>
+        <div class="center"><div><b id="dialTime">--:--</b><span>Karachi time</span></div></div>
+      </div>
+      <div class="rv d3">
+        <div class="legend"><span><i style="background:var(--volt)"></i>Morning shift</span><span><i style="background:var(--red)"></i>Evening shift</span></div>
+        <table class="hours" id="hours" aria-label="Opening hours">
+          <tr data-d="1"><td>Monday</td><td>6:30–10:00 am<br>2:30 pm–1:00 am</td></tr>
+          <tr data-d="2"><td>Tuesday</td><td>6:30–10:00 am<br>2:30 pm–1:00 am</td></tr>
+          <tr data-d="3"><td>Wednesday</td><td>6:30–10:00 am<br>2:30 pm–1:00 am</td></tr>
+          <tr data-d="4"><td>Thursday</td><td>6:30–10:00 am<br>2:30 pm–1:00 am</td></tr>
+          <tr data-d="5"><td>Friday</td><td>6:30–10:00 am<br>2:30 pm–1:00 am</td></tr>
+          <tr data-d="6"><td>Saturday</td><td>6:30–10:00 am<br>2:30 pm–1:00 am</td></tr>
+          <tr data-d="0"><td>Sunday</td><td>Closed</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="map rv">
+      <iframe title="Map showing Fitness Emporium in Gulshan-e-Iqbal, Karachi" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=24.9179659,67.0828528&z=17&output=embed"></iframe>
+      <div class="pin"><b>B-12, Block 1, Gulshan-e-Iqbal</b><span>Karachi · <a href="https://maps.app.goo.gl/GArmczSoqCrQDuH3A" target="_blank" rel="noopener">Open in Google Maps</a></span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="join" id="join">
+      <svg class="bigbolt" viewBox="0 0 12 18" aria-hidden="true"><path d="M7 0 0 10h5l-2 8 9-11H7l1-7z"/></svg>
+      <div class="rv">
+        <h2 class="u">Start your transformation.</h2>
+        <p class="lead">Tell us your goal. This opens WhatsApp with your message ready to send, and we'll reply with a time for your first visit.</p>
+      </div>
+      <form id="trial" novalidate>
+        <label>Your name<input id="name" autocomplete="name" placeholder="e.g. Hamza Ali" required></label>
+        <label>Phone number<input id="phone" type="tel" autocomplete="tel" placeholder="03xx xxxxxxx" required></label>
+        <fieldset>
+          <legend>Your goal</legend>
+          <div class="chips">
+            <input type="radio" name="goal" id="g1" value="Lose fat" checked><label for="g1">Lose fat</label>
+            <input type="radio" name="goal" id="g2" value="Build strength"><label for="g2">Build strength</label>
+            <input type="radio" name="goal" id="g3" value="Improve mobility"><label for="g3">Mobility</label>
+            <input type="radio" name="goal" id="g4" value="Online coaching"><label for="g4">Online coaching</label>
+          </div>
+        </fieldset>
+        <label>When do you want to train?
+          <select id="slot">
+            <option>Morning (6:30–10 am)</option>
+            <option>Afternoon (2:30–6 pm)</option>
+            <option>Evening (6–10 pm)</option>
+            <option>Late night (10 pm–1 am)</option>
+          </select>
+        </label>
+        <p class="err" id="err" role="alert"></p>
+        <button class="btn" type="submit">Send on WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div><b>Fitness Emporium</b>B-12, Block 1, Gulshan-e-Iqbal, Karachi<br>Changing bodies, changing lives.</div>
+    <div><b>Timings</b>Mon–Sat 6:30–10:00 am<br>and 2:30 pm–1:00 am<br>Sunday closed</div>
+    <div><b>Contact</b><a href="tel:+923392120444">0339 2120444</a><br><a href="https://www.instagram.com/fitnessemporium.pk/" target="_blank" rel="noopener">Instagram @fitnessemporium.pk</a></div>
+  </div>
+</footer>
+
+<div class="bar" id="bar">
+  <a class="btn light" href="tel:+923392120444">Call</a>
+  <a class="btn" href="#join">Start now</a>
+</div>
+
+<script>
+(function(){
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* count-up, used by hero (on load) and reviews (on view) */
+  function countUp(el){
+    if (el.dataset.done) return; el.dataset.done = 1;
+    var end = parseFloat(el.dataset.count), dec = +(el.dataset.dec || 0);
+    if (reduce) { el.textContent = end.toFixed(dec); return; }
+    var t0 = null;
+    function step(t){ if(!t0) t0 = t; var p = Math.min((t - t0) / 1400, 1), e = 1 - Math.pow(1 - p, 4);
+      el.textContent = (end * e).toFixed(dec); if (p < 1) requestAnimationFrame(step); }
+    el.textContent = (0).toFixed(dec); requestAnimationFrame(step);
+  }
+  setTimeout(function(){ document.querySelectorAll('.hero [data-count]').forEach(countUp); }, 900);
+
+  /* scroll reveals: opacity/transform only, threshold 0, fallback if no observer */
+  var rvs = document.querySelectorAll('.rv');
+  function show(el){
+    el.classList.add('in');
+    el.querySelectorAll('[data-count]').forEach(countUp);
+    if (el.id === 'neonbox') { el.classList.add('lit'); document.getElementById('neon').classList.add('lit'); }
+  }
+  if (!('IntersectionObserver' in window)) { rvs.forEach(show); }
+  else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting) { show(en.target); io.unobserve(en.target); } });
+    }, { threshold: 0, rootMargin: '0px 0px -8% 0px' });
+    rvs.forEach(function(el){ io.observe(el); });
+  }
+  /* safety net: anything already above the fold or scrolled past gets shown */
+  window.addEventListener('load', function(){
+    setTimeout(function(){
+      rvs.forEach(function(el){ if (el.getBoundingClientRect().top < window.innerHeight) show(el); });
+    }, 1200);
+  });
+
+  /* tabs */
+  var tabs = [].slice.call(document.querySelectorAll('.tab'));
+  function select(tab){
+    tabs.forEach(function(t){
+      var on = t === tab, p = document.getElementById(t.getAttribute('aria-controls'));
+      t.setAttribute('aria-selected', on); t.tabIndex = on ? 0 : -1;
+      if (on) { p.hidden = false; void p.offsetWidth; p.classList.add('on'); }
+      else { p.classList.remove('on'); p.hidden = true; }
+    });
+  }
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){ select(t); });
+    t.addEventListener('keydown', function(e){
+      var k = e.key, j = k === 'ArrowRight' || k === 'ArrowDown' ? i + 1 : k === 'ArrowLeft' || k === 'ArrowUp' ? i - 1 : null;
+      if (j === null) return; e.preventDefault(); var n = tabs[(j + tabs.length) % tabs.length]; select(n); n.focus();
+    });
+  });
+
+  /* header, mobile bar, journey rail */
+  var top = document.getElementById('top'), bar = document.getElementById('bar');
+  var steps = document.getElementById('steps'), rail = document.getElementById('rail'), stepEls = steps.querySelectorAll('.step');
+  var ticking = false;
+  function onScroll(){
+    var y = window.scrollY, vh = window.innerHeight;
+    top.classList.toggle('solid', y > 30);
+    bar.classList.toggle('show', y > vh * .6);
+    var r = steps.getBoundingClientRect();
+    var p = Math.min(Math.max((vh * .82 - r.top) / (r.height + vh * .3), 0), 1);
+    rail.style.setProperty('--p', p.toFixed(3));
+    stepEls.forEach(function(s, i){ s.classList.toggle('on', p > i / stepEls.length + .02); });
+    ticking = false;
+  }
+  window.addEventListener('scroll', function(){ if (!ticking) { requestAnimationFrame(onScroll); ticking = true; } }, { passive: true });
+  window.addEventListener('resize', onScroll);
+  onScroll();
+
+  /* 24-hour dial */
+  var C = 200, R = 150;
+  function pt(h, r){ var a = (h / 24) * 2 * Math.PI - Math.PI / 2; return [C + r * Math.cos(a), C + r * Math.sin(a)]; }
+  function arc(h1, h2){
+    var a = pt(h1, R), b = pt(h2, R), large = ((h2 - h1 + 24) % 24) > 12 ? 1 : 0;
+    return 'M' + a[0].toFixed(1) + ' ' + a[1].toFixed(1) + ' A' + R + ' ' + R + ' 0 ' + large + ' 1 ' + b[0].toFixed(1) + ' ' + b[1].toFixed(1);
+  }
+  document.getElementById('arcAm').setAttribute('d', arc(6.5, 10));
+  document.getElementById('arcPm').setAttribute('d', arc(14.5, 25));
+  var ticks = document.getElementById('ticks'), NS = 'http://www.w3.org/2000/svg';
+  [[0,'12 am'],[6,'6 am'],[12,'12 pm'],[18,'6 pm']].forEach(function(t){
+    var a = pt(t[0], 172), b = pt(t[0], 182), l = document.createElementNS(NS, 'line');
+    l.setAttribute('class', 'tick'); l.setAttribute('x1', a[0]); l.setAttribute('y1', a[1]); l.setAttribute('x2', b[0]); l.setAttribute('y2', b[1]); ticks.appendChild(l);
+    var p = pt(t[0], 112), tx = document.createElementNS(NS, 'text');
+    tx.setAttribute('class', 'lbl'); tx.setAttribute('x', p[0]); tx.setAttribute('y', p[1]); tx.textContent = t[1]; ticks.appendChild(tx);
+  });
+
+  /* live status, Karachi time. Mon–Sat 6:30–10 am and 2:30 pm–1 am; Sunday closed */
+  function khi(){
+    var parts = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Karachi', weekday: 'short', hour: '2-digit', minute: '2-digit', hour12: false }).formatToParts(new Date());
+    var o = {}; parts.forEach(function(p){ o[p.type] = p.value; });
+    var h = (+o.hour) % 24, m = +o.minute;
+    return { d: { Sun:0, Mon:1, Tue:2, Wed:3, Thu:4, Fri:5, Sat:6 }[o.weekday], h: h, m: m, t: h + m / 60 };
+  }
+  function status(){
+    var n = khi(), d = n.d, t = n.t, open = false, msg;
+    var workday = d >= 1 && d <= 6, afterWorkday = d >= 2 || d === 0;
+    if (t < 1 && afterWorkday) { open = true; msg = 'Open now, till 1 am'; }
+    else if (workday && t >= 6.5 && t < 10) { open = true; msg = 'Open now, till 10 am'; }
+    else if (workday && t >= 14.5) { open = true; msg = 'Open now, till 1 am'; }
+    else if (workday && t < 6.5) msg = 'Closed now, opens 6:30 am';
+    else if (workday && t < 14.5) msg = 'Closed now, opens 2:30 pm';
+    else msg = 'Closed today, opens Monday 6:30 am';
+    document.getElementById('state').textContent = msg;
+    document.getElementById('dot').className = open ? 'dot' : 'dot off';
+    var hh = n.h % 12 || 12, ap = n.h < 12 ? 'am' : 'pm';
+    document.getElementById('dialTime').textContent = hh + ':' + (n.m < 10 ? '0' : '') + n.m + ' ' + ap;
+    document.getElementById('needle').style.transform = 'rotate(' + (t / 24 * 360) + 'deg)';
+    document.getElementById('needle').style.transformOrigin = '200px 200px';
+    document.querySelectorAll('#hours tr').forEach(function(r){ r.classList.toggle('today', +r.dataset.d === d); });
+  }
+  status(); setInterval(status, 30000);
+
+  /* free trial form -> WhatsApp */
+  document.getElementById('trial').addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('name').value.trim(), phone = document.getElementById('phone').value.trim(), err = document.getElementById('err');
+    if (!name || phone.replace(/\D/g, '').length < 10) { err.textContent = 'Add your name and a 10 or 11 digit phone number.'; return; }
+    err.textContent = '';
+    var goal = document.querySelector('input[name=goal]:checked').value, slot = document.getElementById('slot').value;
+    var msg = 'Assalam o Alaikum! I want to start my transformation at Fitness Emporium.\nName: ' + name + '\nPhone: ' + phone + '\nGoal: ' + goal + '\nPreferred time: ' + slot;
+    window.open('https://wa.me/923392120444?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+  });
+})();
+</script>
+</body>
+</html>
